@@ -5,8 +5,8 @@
 #include <stdlib.h>
 
 void main_init_function(void) {
-    state__add_star((Vector3){SOLAR_RADIUS_MANTISSA * 5.0f, SOLAR_RADIUS_MANTISSA * 5.0f, SOLAR_RADIUS_MANTISSA * -5.0f}, (Vector3){0.0f, 0.0f, 0.0f}, SOLAR_MASS_MANTISSA, SOLAR_RADIUS_MANTISSA, YELLOW);
-    state__add_star((Vector3){SOLAR_RADIUS_MANTISSA * -5.0f, SOLAR_RADIUS_MANTISSA * -5.0f, SOLAR_RADIUS_MANTISSA * 5.0f}, (Vector3){0.0f, 0.0f, 0.0f}, SOLAR_MASS_MANTISSA, SOLAR_RADIUS_MANTISSA, ORANGE);
+    state__add_star((Vector3){SOLAR_RADIUS_MANTISSA * 5.0f, SOLAR_RADIUS_MANTISSA * 5.0f, SOLAR_RADIUS_MANTISSA * -5.0f}, (Vector3){0.1f, 0.0f, 0.0f}, SOLAR_MASS_MANTISSA, SOLAR_RADIUS_MANTISSA, YELLOW);
+    state__add_star((Vector3){SOLAR_RADIUS_MANTISSA * -5.0f, SOLAR_RADIUS_MANTISSA * -5.0f, SOLAR_RADIUS_MANTISSA * 5.0f}, (Vector3){0.0f, 0.1f, 0.0f}, SOLAR_MASS_MANTISSA, SOLAR_RADIUS_MANTISSA, ORANGE);
 }
 
 void main_loop_function(void) {

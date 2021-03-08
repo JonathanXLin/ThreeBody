@@ -60,3 +60,9 @@ Vector3 utils__float_to_vector3(float x, float y, float z) {
 
     return new_vector;
 }
+
+void utils__add_vector(Vector3 *destination, Vector3 *source) {
+    destination->x += source->x;
+    destination->y += source->y;
+    destination->z += source->z;
+}

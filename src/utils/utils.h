@@ -40,4 +40,6 @@ Vector3 utils__int_to_vector3(int x, int y, int z);
 
 Vector3 utils__float_to_vector3(float x, float y, float z);
 
+void utils__add_vector(Vector3 *destination, Vector3 *source);
+
 #endif /* #ifdef UTILS_H */

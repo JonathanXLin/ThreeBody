@@ -9,8 +9,10 @@
 /* Standard Includes */
 #include <stdlib.h>
 #include <math.h>
+#include <assert.h>
 
 /* External Includes */
+#include "../utils/utils.h"
 
 /* Private Module Includes */
 #include "engine_private.h"
@@ -72,7 +74,34 @@ void engine__init(void) {
 }
 
 bool engine__iterate_star(size_t index) {
+    size_t num_stars = state__get_star_list_size();
+
+    if (index >= num_stars) {
+        return false;
+    }
+
+    star_s star;
+    bool get_star_result = state__get_star(index, &star);
+    assert(get_star_result);
+
+    double x_position_change = star.point.velocity.x * TIMESTEP;
+    double y_position_change = star.point.velocity.y * TIMESTEP;
+    double z_position_change = star.point.velocity.z * TIMESTEP;
+
+    Vector3 position_change = {.x = x_position_change, .y = y_position_change, .z = z_position_change};
+    state__change_star_position(index, position_change);
     
+    // Vector3 velocity_change = {.x = 0.0f, .y = 0.0f, .z = 0.0f};
+
+    // for (int i=0; i<num_stars; i++) {
+    //     if (i == index) {
+    //         continue;
+    //     }
+
+    //     star_s *curr_star;
+    //     bool get_star_result = state__get_star(i, curr_star);
+    //     assert(get_star_result);
+    // }
 
     return true;
 }

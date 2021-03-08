@@ -30,6 +30,8 @@
 #define SOLAR_RADIUS_MANTISSA       ((double)6.9634)
 #define SOLAR_RADIUS_EXPONENT       9
 
+#define TIMESTEP                    ((double)1.0)
+
 /***********************************************************************************************************************
  *
  *                                                  T Y P E D E F S
